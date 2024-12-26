@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", serif;
+}
+
+body {
+  background-color: #dde5e8;
+}
+
+section {
+  width: 800px;
+  margin: 50px auto;
+  display: flex;
+  background-color: red;
+}
+
+.container {
+  width: 60%;
+  background-color: #2f3545;
+  color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container > h2 {
+  color: #daaf57;
+}
+.container > .total h3 {
+  margin: 0 0 20px 0;
+}
+.container > .total p {
+  font-size: 20px;
+}
+.container > .total + div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.container :where(.expense, .income) {
+  font-size: 16px;
+  border: 3px solid #06a084;
+  color: #06a084;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container .expense {
+  border-color: #b64654;
+  color: #b64654;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.container form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container form label {
+  display: block;
+  font-size: 15px;
+}
+.container form .form-group select {
+  height: 32px;
+  padding: 0 0 0 10px;
+}
+.container form .form-group input {
+  height: 32px;
+  padding: 0 0 0 10px;
+  outline: none;
+}
+.container form div:last-child {
+  /* background-color: red; */
+}
+.container form div:last-child button {
+  width: 100%;
+  background-color: #46a0d9;
+  height: 32px;
+  color: white;
+  border: none;
+}
+
+.transaction-container {
+  width: 70%;
+  background-color: #fff;
+  padding: 20px;
+}
+.transaction-container table {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.transaction-container table td,
+.transaction-container table th {
+  border: 1px solid black;
+  padding: 7px;
+}
