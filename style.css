@@ -56,34 +56,34 @@ section {
   color: #b64654;
 }
 
-.container form {
+form {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 10px;
 }
-.container form .form-group {
+form .form-group {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.container form label {
+form label {
   display: block;
   font-size: 15px;
 }
-.container form .form-group select {
+form .form-group select {
   height: 32px;
   padding: 0 0 0 10px;
 }
-.container form .form-group input {
+form .form-group input {
   height: 32px;
   padding: 0 0 0 10px;
   outline: none;
 }
-.container form div:last-child {
+form div:last-child {
   /* background-color: red; */
 }
-.container form div:last-child button {
+form div:last-child button {
   width: 100%;
   background-color: #46a0d9;
   height: 32px;
@@ -105,4 +105,24 @@ section {
 .transaction-container table th {
   border: 1px solid black;
   padding: 7px;
+}
+
+/***********MODEL***************/
+
+#modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal form {
+  background-color: #fff;
+  width: 400px;
+  padding: 15px 20px;
 }

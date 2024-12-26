@@ -91,6 +91,42 @@
       <!--table end-->
     </section>
 
+    <div id="modal">
+      <form action="#">
+        <h3>Edit Transaction</h3>
+
+        <!--form group-->
+        <div class="form-group">
+          <label for="edit-select">Transaction Type</label>
+          <select id="edit-select">
+            <option value="">Select Type</option>
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+        </div>
+
+        <!--form group-->
+        <div class="form-group">
+          <label for="edit-description">Description</label>
+          <input
+            type="text"
+            placeholder="Enter Description"
+            id="edit-description"
+          />
+        </div>
+
+        <!--form group-->
+        <div class="form-group">
+          <label for="amount">Amount</label>
+          <input type="number" placeholder="Amount" id="edit-amount" />
+        </div>
+
+        <div>
+          <button id="btn-update">Update Transaction</button>
+        </div>
+      </form>
+    </div>
+
     <!--JS LINKS-->
     <script src="script.js"></script>
     <!--JS LINKS END-->
