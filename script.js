@@ -81,8 +81,8 @@ function loadTransaction() {
         <td>${item.trans_description}</td>
         <td>${item.trans_amount}</td>
         <td>
-        <button data-id=${item.id} class="edit-btn">edit</button>
-        <button data-id=${item.id} class="delete-btn">delete</button>
+        <button data-id=${item.id} class="edit-btn">Edit</button>
+        <button data-id=${item.id} class="delete-btn">Delete</button>
         </td>
         </tr>
         `;
@@ -103,6 +103,7 @@ function loadTransaction() {
   editBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       let id = Number(e.target.dataset.id);
+      console.log(id);
       openModal(id);
     });
   });
@@ -112,7 +113,7 @@ function loadTransaction() {
 //model open and data display in model
 function openModal(id) {
   let selected_obj = transactionArray.filter((item) => item.id == id)[0];
-  // console.log(selected_obj);
+
   modalSelect.value = selected_obj.trans_type;
   modaldescription.value = selected_obj.trans_description;
   modalAmount.value = selected_obj.trans_amount;
