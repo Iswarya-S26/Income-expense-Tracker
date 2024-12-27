@@ -49,7 +49,7 @@ function addTransaction() {
     trans_description: descriptionElement.value,
     trans_amount: amountElement.value,
   };
-  console.log(transObj);
+  // console.log(transObj);
   transactionArray.push(transObj);
   clearAll();
   loadTransaction();
@@ -78,7 +78,7 @@ function loadTransaction() {
   deleteBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       let id = Number(e.target.dataset.id);
-      console.log(id);
+      // console.log(id);
       deleteTransaction(id);
     });
   });
@@ -93,13 +93,14 @@ function loadTransaction() {
   displayBalance();
 }
 
+//model open and data display in model
 function openModal(id) {
-  console.log(id);
   let selected_obj = transactionArray.filter((item) => item.id == id)[0];
-  console.log(selected_obj);
+  // console.log(selected_obj);
   modalSelect.value = selected_obj.trans_type;
   modaldescription.value = selected_obj.trans_description;
   modalAmount.value = selected_obj.trans_amount;
+  hiddenInput.value = id;
   modal.style.display = "block";
   modal.style.cssText = ` 
   display: flex;
@@ -109,15 +110,46 @@ function openModal(id) {
 
 function closeModal() {
   modal.style.display = "none";
+  modalSelect.value = "";
+  modaldescription.value = "";
+  modalAmount.value = "";
 }
 
 modalBtn.addEventListener("click", () => {
   updateTransaction();
 });
-
-function updateTransaction() {}
-
 //{id: 1735223150895, trans_type: 'income', trans_description: 'salary', trans_amount: '1000'}
+function updateTransaction() {
+  let new_type = modalSelect.value;
+  let new_decription = modaldescription.value;
+  let new_amount = modalAmount.value;
+  let id = hiddenInput.value;
+  if (new_type == "" || new_decription == "" || new_amount == "") {
+    alert("Please Enter Data");
+    return;
+  }
+  let updatedTransactions = transactionArray.map((item) => {
+    if (item.id == id) {
+      return {
+        ...item,
+        trans_type: new_type,
+        trans_description: new_decription,
+        trans_amount: new_amount,
+      };
+    } else {
+      return item;
+    }
+  });
+  transactionArray = updatedTransactions;
+  console.log(updatedTransactions);
+  // console.log(new_type);
+  // console.log(new_decription);
+  // console.log(new_amount);
+  // console.log(id);
+  closeModal();
+  loadTransaction();
+}
+
 function displayBalance() {
   total_income = 0;
   total_expense = 0;

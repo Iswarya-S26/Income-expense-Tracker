@@ -12,14 +12,29 @@ body {
 }
 
 section {
-  width: 800px;
+  width: 400px;
   margin: 50px auto;
-  display: flex;
+  /* display: flex; */
   background-color: red;
 }
 
+@media (min-width: 768px) {
+  section {
+    width: 740px;
+    display: flex;
+  }
+}
+@media (min-width: 992px) {
+  .transaction-container {
+    width: 100%;
+  }
+  .container {
+    width: 65%;
+  }
+}
+
 .container {
-  width: 60%;
+  /* width: 60%; */
   background-color: #2f3545;
   color: white;
   padding: 30px;
@@ -30,9 +45,10 @@ section {
 
 .container > h2 {
   color: #daaf57;
+  font-size: 18px;
 }
-.container > .total h3 {
-  margin: 0 0 20px 0;
+.container > .total h4 {
+  margin: 0 0 10px 0;
 }
 .container > .total p {
   font-size: 20px;
@@ -55,7 +71,9 @@ section {
   border-color: #b64654;
   color: #b64654;
 }
-
+.container :where(.expense, .income) h3 {
+  font-size: 15px;
+}
 form {
   display: flex;
   flex-direction: column;
@@ -92,9 +110,9 @@ form div:last-child button {
 }
 
 .transaction-container {
-  width: 70%;
+  /* width: 70%; */
   background-color: #fff;
-  padding: 20px;
+  padding: 7px;
 }
 .transaction-container table {
   width: 100%;
@@ -104,7 +122,7 @@ form div:last-child button {
 .transaction-container table td,
 .transaction-container table th {
   border: 1px solid black;
-  padding: 7px;
+  padding: 5px;
 }
 
 /***********MODEL***************/
