@@ -35,11 +35,7 @@ function clearAll() {
 
 //add transaction
 function addTransaction() {
-  if (
-    transSelectElement.value == "" ||
-    descriptionElement.value == "" ||
-    amountElement.value == ""
-  ) {
+  if (transSelectElement.value == "" || descriptionElement.value == "" || amountElement.value == "") {
     alert("Please Enter Data");
     return;
   }
