@@ -15,6 +15,9 @@ A simple and easy-to-use Income-Expense Tracker web application. Keep track of y
 <img src="./assets/preview.gif" alt="To-Do App Screenshot" width="600px"  />
 </div>
 
+## 🚀 Live Demo
+
+Check out the live version of the app here: [Live Demo](https://iswarya-s26.github.io/Income-expense-Tracker/)
 
 
 
