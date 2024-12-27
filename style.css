@@ -94,6 +94,7 @@ form label {
   font-size: 15px;
 }
 form .form-group select {
+  outline: none;
   height: 32px;
   padding: 0 0 0 10px;
 }
@@ -101,6 +102,10 @@ form .form-group input {
   height: 32px;
   padding: 0 0 0 10px;
   outline: none;
+}
+form .form-group input:focus,
+form .form-group select:focus {
+  box-shadow: rgba(16, 179, 233, 0.35) 0px 5px 15px;
 }
 form div:last-child {
   margin-top: 10px;
@@ -111,8 +116,12 @@ form div:last-child button {
   height: 32px;
   color: white;
   border: none;
+  cursor: pointer;
 }
-
+form div:last-child button:hover {
+  background-color: #1693bc;
+  border: 1px solid #075f95;
+}
 .transaction-container {
   /* width: 70%; */
   background-color: #fff;
@@ -127,6 +136,10 @@ form div:last-child button {
 .transaction-container table th {
   border: 1px solid black;
   padding: 5px;
+  text-align: center;
+}
+
+.transaction-container table td:last-child {
 }
 
 /***********MODEL***************/
@@ -170,4 +183,12 @@ form div:last-child button {
   cursor: pointer;
   color: rgb(119, 0, 0);
   background-color: rgb(245, 95, 95);
+}
+
+/***EMPTY MSG ELEMENT**/
+#empty {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 30px;
 }

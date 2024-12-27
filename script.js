@@ -4,10 +4,14 @@ const descriptionElement = document.getElementById("description-input");
 const amountElement = document.getElementById("amount-input");
 const addBtn = document.getElementById("btn-add");
 const tbodyOutput = document.getElementById("transaction-tbody");
+const tableElement = document.querySelector("table");
+const emptyMsgElement = document.querySelector("#empty");
+
 //getting balances element
 const total_element = document.getElementById("total-ouput");
 const income_element = document.getElementById("income-output");
 const expense_element = document.getElementById("expense-output");
+
 //model
 const modal = document.getElementById("modal");
 const modalSelect = document.getElementById("edit-select");
@@ -15,11 +19,25 @@ const modaldescription = document.getElementById("edit-description");
 const modalAmount = document.getElementById("edit-amount");
 const modalBtn = document.getElementById("btn-update");
 const hiddenInput = document.getElementById("hidden-id");
+
 // global transation array
 let transactionArray = [];
 let total_balance = 0;
 let total_income = 0;
 let total_expense = 0;
+
+checkTransaction();
+//checkTransaction
+function checkTransaction() {
+  if (transactionArray.length == 0) {
+    emptyMsgElement.style.display = "block";
+    emptyMsgElement.innerHTML = `<p>No transaction found</p>`;
+    tableElement.style.display = "none";
+  } else {
+    emptyMsgElement.style.display = "none";
+    tableElement.style.display = "block";
+  }
+}
 
 addBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -53,6 +71,7 @@ function addTransaction() {
 
 //load transaction
 function loadTransaction() {
+  checkTransaction();
   let output = "";
   transactionArray.forEach((item, index) => {
     output += `
@@ -68,6 +87,7 @@ function loadTransaction() {
         </tr>
         `;
   });
+
   //fetching all delete buttons
   tbodyOutput.innerHTML = output;
   const deleteBtns = document.querySelectorAll(".delete-btn");
@@ -138,10 +158,6 @@ function updateTransaction() {
   });
   transactionArray = updatedTransactions;
   console.log(updatedTransactions);
-  // console.log(new_type);
-  // console.log(new_decription);
-  // console.log(new_amount);
-  // console.log(id);
   closeModal();
   loadTransaction();
 }
