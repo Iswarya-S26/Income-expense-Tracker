@@ -8,7 +8,13 @@ const tbodyOutput = document.getElementById("transaction-tbody");
 const total_element = document.getElementById("total-ouput");
 const income_element = document.getElementById("income-output");
 const expense_element = document.getElementById("expense-output");
-
+//model
+const modal = document.getElementById("modal");
+const modalSelect = document.getElementById("edit-select");
+const modaldescription = document.getElementById("edit-description");
+const modalAmount = document.getElementById("edit-amount");
+const modalBtn = document.getElementById("btn-update");
+const hiddenInput = document.getElementById("hidden-id");
 // global transation array
 let transactionArray = [];
 let total_balance = 0;
@@ -60,7 +66,7 @@ function loadTransaction() {
         <td>${item.trans_description}</td>
         <td>${item.trans_amount}</td>
         <td>
-        <button>edit</button>
+        <button data-id=${item.id} class="edit-btn">edit</button>
         <button data-id=${item.id} class="delete-btn">delete</button>
         </td>
         </tr>
@@ -69,7 +75,6 @@ function loadTransaction() {
   //fetching all delete buttons
   tbodyOutput.innerHTML = output;
   const deleteBtns = document.querySelectorAll(".delete-btn");
-  console.log(deleteBtns);
   deleteBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       let id = Number(e.target.dataset.id);
@@ -77,8 +82,40 @@ function loadTransaction() {
       deleteTransaction(id);
     });
   });
+  //fetching all edit buttons
+  const editBtns = document.querySelectorAll(".edit-btn");
+  editBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      let id = Number(e.target.dataset.id);
+      openModal(id);
+    });
+  });
   displayBalance();
 }
+
+function openModal(id) {
+  console.log(id);
+  let selected_obj = transactionArray.filter((item) => item.id == id)[0];
+  console.log(selected_obj);
+  modalSelect.value = selected_obj.trans_type;
+  modaldescription.value = selected_obj.trans_description;
+  modalAmount.value = selected_obj.trans_amount;
+  modal.style.display = "block";
+  modal.style.cssText = ` 
+  display: flex;
+  justify-content: center;
+  align-items: center;`;
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+modalBtn.addEventListener("click", () => {
+  updateTransaction();
+});
+
+function updateTransaction() {}
 
 //{id: 1735223150895, trans_type: 'income', trans_description: 'salary', trans_amount: '1000'}
 function displayBalance() {

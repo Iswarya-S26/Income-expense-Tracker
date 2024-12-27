@@ -91,9 +91,15 @@
       <!--table end-->
     </section>
 
+    <!--model-->
     <div id="modal">
       <form action="#">
-        <h3>Edit Transaction</h3>
+        <div>
+          <h3>Edit Transaction</h3>
+          <button onclick="closeModal()">&times;</button>
+        </div>
+        <!--hidden input-->
+        <input type="hidden" id="hidden-id" />
 
         <!--form group-->
         <div class="form-group">
