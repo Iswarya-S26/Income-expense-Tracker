@@ -1,19 +1,22 @@
-# 🎉 **Transaction Tracker** 💸
+# 💸 Income-Expense Tracker
 
-## 🌟 Overview
-The **Transaction Tracker** is a sleek and user-friendly web application designed to help you manage your 💰 finances effortlessly. Track your income and expenses, edit transactions, and view your balances in real-time! 🌈
+A simple and easy-to-use Income-Expense Tracker web application. Keep track of your transactions and manage your financial budget with ease. This app allows you to add, edit, delete, and view transactions, as well as display your balance.
 
----
+## 🧩 Features
 
-## ✨ Features
+- **Add Transaction** 📝: Add income or expense transactions with description and amount.
+- **Edit Transactions** ✏️: Update your transaction details easily.
+- **Delete Transactions** 🗑️: Remove any transaction that you no longer need.
+- **Balance Calculation** 💰: View total income, total expense, and remaining balance.
 
-✔️ **Add Transactions**: Log your income or expenses with ease.  
-✏️ **Edit Transactions**: Modify existing entries with a simple modal.  
-🗑️ **Delete Transactions**: Remove entries with a confirmation prompt.  
-📊 **Real-time Balances**: View your total income, expenses, and net balance dynamically.  
-💾 **Persistent Data**: Automatically saves to local storage for future access.
+## 📷 **Preview**
 
----
+<div>
+<img src="./assets/preview.gif" alt="To-Do App Screenshot" width="600px"  />
+</div>
+
+
+
 
 ## 💻 **Tech Stack**
 
@@ -22,14 +25,7 @@ The **Transaction Tracker** is a sleek and user-friendly web application designe
 - ⚙️ **JavaScript**: Interactive functionality and dynamic updates.
 - 📂 **Local Storage**: Persistent data storage.
 
----
-
-## 🚀 Getting Started
-
-### 🛠️ Prerequisites
-
-🔹 A modern web browser like Chrome, Firefox, or Edge.  
-# 💼 Transaction Manager Usage Guide
+## 🛠️ How to Use
 
 ## ➕ Add a Transaction:
 1. **Select** "Income" or "Expense" from the dropdown.
@@ -50,9 +46,10 @@ The **Transaction Tracker** is a sleek and user-friendly web application designe
 2. **Confirm** the deletion in the popup.
 
 ---
-
 ## 📊 View Balances:
 - **Monitor** your Total Income, Expenses, and Net Balance at the top of the interface.
 
+
 ---
 
+👨‍💻 Made with 💖 by <a href="https://www.linkedin.com/in/iswarya26/">Iswarya Sundarrajan</a>
