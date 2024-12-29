@@ -1,6 +1,6 @@
 # 💸 Income-Expense Tracker
 
-A simple and easy-to-use Income-Expense Tracker web application. Keep track of your transactions and manage your financial budget with ease. This app allows you to add, edit, delete, and view transactions, as well as display your balance.
+A user-friendly Income-Expense Tracker app to manage finances effortlessly. Add, edit, delete, and view transactions while tracking your balance and staying on top of your budget with ease.
 
 ## 🧩 Features
 
