@@ -4,10 +4,13 @@ A user-friendly Income-Expense Tracker app to manage finances effortlessly. Add,
 
 ## 🧩 Features
 
-- **Add Transaction** 📝: Add income or expense transactions with description and amount.
-- **Edit Transactions** ✏️: Update your transaction details easily.
-- **Delete Transactions** 🗑️: Remove any transaction that you no longer need.
-- **Balance Calculation** 💰: View total income, total expense, and remaining balance.
+| Feature                  | Description                                                                               |
+|--------------------------|-------------------------------------------------------------------------------------------|
+| **Add Transaction** 📝   | Add income or expense transactions with description and amount.                           |
+| **Edit Transactions** ✏️ | Update your transaction details easily.                                                   |
+| **Delete Transactions** 🗑️ | Remove any transaction that you no longer need.                                           |
+| **Balance Calculation** 💰 | View total income, total expense, and remaining balance.                                 |
+
 
 ## 📷 **Preview**
 
