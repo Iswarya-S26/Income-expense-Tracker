@@ -58,4 +58,19 @@ Check out the live version of the app here: [Live Demo](https://iswarya-s26.gith
 
 ---
 
+## 📂 Folder Structure  
+
+```plaintext
+project-name/
+├── index.html          # Main HTML file for the project
+├── style.css           # Custom CSS file for styling the project
+├── script.js           # JavaScript file containing project logic
+├── assets/             # Folder for images, GIFs, and other media assets
+│   └── preview.gif     # Preview GIF used in the README
+└── README.md           # Project documentation
+```
+---
+
 👨‍💻 Made with 💖 by <a href="https://www.linkedin.com/in/iswarya26/">Iswarya Sundarrajan</a>
+
+---
